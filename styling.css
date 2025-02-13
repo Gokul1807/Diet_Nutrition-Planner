@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#diet-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, auto 1fr);
+    gap: 10px;
+    align-items: center;
+}
+
+#diet-form label {
+    text-align: left;
+    padding-right: 5px;
+}
+
+#diet-form .weight-label,
+#diet-form .goal-label {
+    grid-column: span 2;
+}
+
+input,
+select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+button {
+    background: green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    max-width: 200px;
+    margin: 10px auto; /* Center horizontally */
+    grid-column: 1 / -1; /* Make button span all columns */
+}
+
+#meal-results,
+#food-output,
+#calorie-log,
+#exercise-plan {
+    margin-top: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f0f0f0;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+#food-output p {
+    margin-bottom: 5px;
+    color: #333;
+    background: #f0f0f0;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#food-output,
+#calorie-log {
+    color: #333;
+}
+
+@media (max-width: 700px) {
+    #diet-form {
+        grid-template-columns: 1fr;
+    }
+
+    #diet-form .weight-label,
+    #diet-form .goal-label,
+    #diet-form label,
+    input,
+    select {
+        grid-column: 1 / -1;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
